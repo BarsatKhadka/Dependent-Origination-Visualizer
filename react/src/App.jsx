@@ -1,12 +1,11 @@
-import { Contact6 } from "./components/Contact6";
-import { Suffering } from "./components/Suffering";
+import { Flow } from "./components/Flow";
+import '@xyflow/react/dist/style.css';
 
 function App() {
-  
   return (
     <>
     <div className="flex justify-center items-center h-screen">
-        <Suffering />
+        <Flow />
     </div>
     </>
   )
