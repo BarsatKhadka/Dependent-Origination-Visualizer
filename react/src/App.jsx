@@ -4,9 +4,9 @@ function App() {
   
   return (
     <>
-       <h1 className="text-3xl font-bold underline">
+    <div className="flex justify-center items-center h-screen">
         <Suffering />
-    </h1>
+    </div>
     </>
   )
 }
