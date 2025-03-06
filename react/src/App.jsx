@@ -1,3 +1,4 @@
+import { Contact6 } from "./components/Contact6";
 import { Suffering } from "./components/Suffering";
 
 function App() {
