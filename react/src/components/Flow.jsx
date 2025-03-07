@@ -53,7 +53,7 @@ export function Flow() {
       { id: '0', type: 'suffering', position: { x: dimensions.width * 0.5, y: dimensions.height *0.5 }},
         { id: '1', type: 'ignorance', position: { x: dimensions.width *0.69 , y: dimensions.height * 0.7 }},
         { id: '2', type: 'formations', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.3 }},
-        { id: '3', type: 'consciousness', position: { x: dimensions.width / 2 - 600, y: dimensions.height / 2 }},
+        { id: '3', type: 'consciousness', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.01 }},
         { id: '4', type: 'nameAndForm', position: { x: dimensions.width / 2 - 800, y: dimensions.height / 2 }},
         { id: '5', type: 'sixSenses', position: { x: dimensions.width / 2 - 1000, y: dimensions.height / 2 }},
         { id: '6', type: 'contact', position: { x: dimensions.width / 2 - 1200, y: dimensions.height / 2 }},
@@ -67,7 +67,15 @@ export function Flow() {
 
     return (
         <div style={{ height: '100%', width: '100%' }}>
-            <ReactFlow nodes={initialNodes} nodeTypes={nodeTypes}>
+            <ReactFlow 
+            nodes={initialNodes} 
+            nodeTypes={nodeTypes}
+            fitView={true}
+            fitViewOptions={{
+                padding: 0.1,
+                minZoom: 0.1,
+                maxZoom: 1
+            }}>
                 <Background />
                 <Controls />
             </ReactFlow>
