@@ -48,62 +48,61 @@ export function Flow() {
         birth: Birth11,
         agingAndDeath: AgingAndDeath12,
     };
-
     const initialNodes = [
         { 
             id: '0', 
             type: 'suffering', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.60 : dimensions.width * 0.42, 
-                y: dimensions.height * 0.5 
+                x: dimensions.width < 640 ? dimensions.width * 0.59 : dimensions.width * 0.42, 
+                y: dimensions.width < 640 && dimensions.height < 1100 ?  dimensions.height * 0.39 : dimensions.height * 0.5 
             }
         },
         { 
             id: '1', 
             type: 'ignorance', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.9 : dimensions.width * 0.69, 
-                y: dimensions.height < 640 ? dimensions.height * 0.1 : dimensions.height * 0.8
+                x: dimensions.width < 640 ? dimensions.width * 0.90 : dimensions.width * 0.69, 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.6 : dimensions.height * 0.8
             }
         },
         { 
             id: '2', 
             type: 'formations', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.75 : dimensions.width * 0.69, 
-                y: dimensions.height * 0.6 
+                x: dimensions.width < 640 ? dimensions.width * 0.88 : dimensions.width * 0.69, 
+                y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.48 : dimensions.height * 0.6
             }
         },
         { 
             id: '3', 
             type: 'consciousness', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.75 : dimensions.width * 0.69, 
-                y: dimensions.height * 0.35 
+                x: dimensions.width < 640 ? dimensions.width * 0.85 : dimensions.width * 0.69, 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.29 : dimensions.height * 0.35 
             }
         },
         { 
             id: '4', 
             type: 'nameAndForm', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.75 : dimensions.width * 0.69, 
-                y: dimensions.height * 0.15 
+                x: dimensions.width < 640 ? dimensions.width * 0.83 : dimensions.width * 0.69, 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.16 : dimensions.height * 0.15 
             }
         },
         { 
             id: '5', 
             type: 'sixSenses', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.60 : dimensions.width * 0.5, 
-                y: dimensions.height * 0.15 
+                x: dimensions.width < 640 ? dimensions.width * 0.73 : dimensions.width * 0.5, 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.01 : dimensions.height * 0.15 
             }
         },
         { 
             id: '6', 
             type: 'contact', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.32, 
-                y: dimensions.height * 0.15 
+                x: dimensions.width < 640 ? dimensions.width * 0.46 : dimensions.width * 0.32, 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.01 : dimensions.height * 0.15 
             }
         },
         { 
@@ -111,7 +110,7 @@ export function Flow() {
             type: 'feeling', 
             position: { 
                 x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-                y: dimensions.height * 0.15 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.16 : dimensions.height * 0.15 
             }
         },
         { 
@@ -119,7 +118,7 @@ export function Flow() {
             type: 'craving', 
             position: { 
                 x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-                y: dimensions.height * 0.35 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.29 : dimensions.height * 0.35 
             }
         },
         { 
@@ -127,7 +126,7 @@ export function Flow() {
             type: 'clinging', 
             position: { 
                 x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-                y: dimensions.height * 0.6 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.48 : dimensions.height * 0.6 
             }
         },
         { 
@@ -135,7 +134,7 @@ export function Flow() {
             type: 'becoming', 
             position: { 
                 x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-                y: dimensions.height * 0.8 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.6 : dimensions.height * 0.8 
             }
         },
         { 
@@ -143,15 +142,15 @@ export function Flow() {
             type: 'birth', 
             position: { 
                 x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.34, 
-                y: dimensions.height * 0.8 
+                y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.75 : dimensions.height * 0.8 
             }
         },
         { 
             id: '12', 
             type: 'agingAndDeath', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0.60 : dimensions.width * 0.5, 
-                y: dimensions.height * 0.8 
+                x: dimensions.width < 640 ? dimensions.width * 0.73 : dimensions.width * 0.5, 
+                y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.75 : dimensions.height * 0.8 
             }
         }
     ];
