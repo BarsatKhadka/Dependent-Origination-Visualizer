@@ -63,7 +63,7 @@ export function Flow() {
             type: 'ignorance', 
             position: { 
                 x: dimensions.width < 640 ? dimensions.width * 0.9 : dimensions.width * 0.69, 
-                y: dimensions.height * 0.8 
+                y: dimensions.height < 640 ? dimensions.height * 0.1 : dimensions.height * 0.8
             }
         },
         { 
