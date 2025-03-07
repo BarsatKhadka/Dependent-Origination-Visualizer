@@ -141,7 +141,7 @@ export function Flow() {
             id: '11', 
             type: 'birth', 
             position: { 
-                x: dimensions.width < 640 ? dimensions.width * 0. : dimensions.width * 0.34, 
+                x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.34, 
                 y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.75 : dimensions.height * 0.8 
             }
         },
