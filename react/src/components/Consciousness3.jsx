@@ -13,7 +13,7 @@ export const Consciousness3 = () => {
                   />
                   <Handle
                     type="source"
-                    position={Position.Bottom}
+                    position={Position.Top}
                     id="top"
                     style={{ background: '#555', width: '10px', height: '10px' }}
                   />
