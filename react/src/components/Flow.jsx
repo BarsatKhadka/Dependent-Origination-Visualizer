@@ -50,19 +50,110 @@ export function Flow() {
     };
 
     const initialNodes = [
-      { id: '0', type: 'suffering', position: { x: dimensions.width * 0.44, y: dimensions.height *0.5 }},
-        { id: '1', type: 'ignorance', position: { x: dimensions.width *0.69 , y: dimensions.height * 0.8 }},
-        { id: '2', type: 'formations', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.6}},
-        { id: '3', type: 'consciousness', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.35}},
-        { id: '4', type: 'nameAndForm', position: { x: dimensions.width *0.69, y: dimensions.height * 0.15 }},
-        { id: '5', type: 'sixSenses', position: { x: dimensions.width * 0.5, y: dimensions.height * 0.15 }},
-        { id: '6', type: 'contact', position: { x: dimensions.width * 0.32, y: dimensions.height *0.15 }},
-        { id: '7', type: 'feeling', position: { x: dimensions.width * 0.13, y: dimensions.height * 0.15}},
-        { id: '8', type: 'craving', position: { x: dimensions.width * 0.13, y: dimensions.height * 0.35 }},
-        { id: '9', type: 'clinging', position: { x: dimensions.width * 0.13, y: dimensions.height *0.6 }},
-        { id: '10', type: 'becoming', position: { x: dimensions.width * 0.13 , y: dimensions.height * 0.8 }},
-        { id: '11', type: 'birth', position: { x: dimensions.width * 0.34, y: dimensions.height * 0.8 }},
-        { id: '12', type: 'agingAndDeath', position: { x: dimensions.width * 0.5, y: dimensions.height * 0.8 }},
+        { 
+            id: '0', 
+            type: 'suffering', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.60 : dimensions.width * 0.42, 
+                y: dimensions.height * 0.5 
+            }
+        },
+        { 
+            id: '1', 
+            type: 'ignorance', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.9 : dimensions.width * 0.69, 
+                y: dimensions.height * 0.8 
+            }
+        },
+        { 
+            id: '2', 
+            type: 'formations', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.75 : dimensions.width * 0.69, 
+                y: dimensions.height * 0.6 
+            }
+        },
+        { 
+            id: '3', 
+            type: 'consciousness', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.75 : dimensions.width * 0.69, 
+                y: dimensions.height * 0.35 
+            }
+        },
+        { 
+            id: '4', 
+            type: 'nameAndForm', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.75 : dimensions.width * 0.69, 
+                y: dimensions.height * 0.15 
+            }
+        },
+        { 
+            id: '5', 
+            type: 'sixSenses', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.60 : dimensions.width * 0.5, 
+                y: dimensions.height * 0.15 
+            }
+        },
+        { 
+            id: '6', 
+            type: 'contact', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.32, 
+                y: dimensions.height * 0.15 
+            }
+        },
+        { 
+            id: '7', 
+            type: 'feeling', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
+                y: dimensions.height * 0.15 
+            }
+        },
+        { 
+            id: '8', 
+            type: 'craving', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
+                y: dimensions.height * 0.35 
+            }
+        },
+        { 
+            id: '9', 
+            type: 'clinging', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
+                y: dimensions.height * 0.6 
+            }
+        },
+        { 
+            id: '10', 
+            type: 'becoming', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
+                y: dimensions.height * 0.8 
+            }
+        },
+        { 
+            id: '11', 
+            type: 'birth', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.34, 
+                y: dimensions.height * 0.8 
+            }
+        },
+        { 
+            id: '12', 
+            type: 'agingAndDeath', 
+            position: { 
+                x: dimensions.width < 640 ? dimensions.width * 0.60 : dimensions.width * 0.5, 
+                y: dimensions.height * 0.8 
+            }
+        }
     ];
 
     return (
@@ -70,6 +161,12 @@ export function Flow() {
             <ReactFlow 
             nodes={initialNodes} 
             nodeTypes={nodeTypes}
+            fitView={true}
+            fitViewOptions={{
+                padding: window.innerWidth < 640 ? 0.2 : 0.5,
+                minZoom: window.innerWidth < 640 ? 0.3 : 0.5,
+                maxZoom: 2
+            }}
             >
                 <Background />
                 <Controls />
