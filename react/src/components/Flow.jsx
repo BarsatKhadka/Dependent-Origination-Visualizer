@@ -70,12 +70,7 @@ export function Flow() {
             <ReactFlow 
             nodes={initialNodes} 
             nodeTypes={nodeTypes}
-            fitView={true}
-            fitViewOptions={{
-                padding: 0.1,
-                minZoom: 0.1,
-                maxZoom: 1
-            }}>
+            >
                 <Background />
                 <Controls />
             </ReactFlow>
