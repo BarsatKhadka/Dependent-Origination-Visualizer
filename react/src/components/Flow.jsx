@@ -50,19 +50,19 @@ export function Flow() {
     };
 
     const initialNodes = [
-      { id: '0', type: 'suffering', position: { x: dimensions.width * 0.5, y: dimensions.height *0.5 }},
-        { id: '1', type: 'ignorance', position: { x: dimensions.width *0.69 , y: dimensions.height * 0.7 }},
-        { id: '2', type: 'formations', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.3 }},
-        { id: '3', type: 'consciousness', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.01 }},
-        { id: '4', type: 'nameAndForm', position: { x: dimensions.width / 2 - 800, y: dimensions.height / 2 }},
-        { id: '5', type: 'sixSenses', position: { x: dimensions.width / 2 - 1000, y: dimensions.height / 2 }},
-        { id: '6', type: 'contact', position: { x: dimensions.width / 2 - 1200, y: dimensions.height / 2 }},
-        { id: '7', type: 'feeling', position: { x: dimensions.width / 2 - 1400, y: dimensions.height / 2 }},
-        { id: '8', type: 'craving', position: { x: dimensions.width / 2 - 1600, y: dimensions.height / 2 }},
-        { id: '9', type: 'clinging', position: { x: dimensions.width / 2 - 1800, y: dimensions.height / 2 }},
-        { id: '10', type: 'becoming', position: { x: dimensions.width / 2 - 2000, y: dimensions.height / 2 }},
-        { id: '11', type: 'birth', position: { x: dimensions.width / 2 - 2200, y: dimensions.height / 2 }},
-        { id: '12', type: 'agingAndDeath', position: { x: dimensions.width / 2 - 2400, y: dimensions.height / 2 }},
+      { id: '0', type: 'suffering', position: { x: dimensions.width * 0.44, y: dimensions.height *0.5 }},
+        { id: '1', type: 'ignorance', position: { x: dimensions.width *0.69 , y: dimensions.height * 0.8 }},
+        { id: '2', type: 'formations', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.6}},
+        { id: '3', type: 'consciousness', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.35}},
+        { id: '4', type: 'nameAndForm', position: { x: dimensions.width *0.69, y: dimensions.height * 0.15 }},
+        { id: '5', type: 'sixSenses', position: { x: dimensions.width * 0.5, y: dimensions.height * 0.15 }},
+        { id: '6', type: 'contact', position: { x: dimensions.width * 0.32, y: dimensions.height *0.15 }},
+        { id: '7', type: 'feeling', position: { x: dimensions.width * 0.13, y: dimensions.height * 0.15}},
+        { id: '8', type: 'craving', position: { x: dimensions.width * 0.13, y: dimensions.height * 0.35 }},
+        { id: '9', type: 'clinging', position: { x: dimensions.width * 0.13, y: dimensions.height *0.6 }},
+        { id: '10', type: 'becoming', position: { x: dimensions.width * 0.13 , y: dimensions.height * 0.8 }},
+        { id: '11', type: 'birth', position: { x: dimensions.width * 0.34, y: dimensions.height * 0.8 }},
+        { id: '12', type: 'agingAndDeath', position: { x: dimensions.width * 0.5, y: dimensions.height * 0.8 }},
     ];
 
     return (
