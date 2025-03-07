@@ -52,7 +52,7 @@ export function Flow() {
     const initialNodes = [
       { id: '0', type: 'suffering', position: { x: dimensions.width * 0.5, y: dimensions.height *0.5 }},
         { id: '1', type: 'ignorance', position: { x: dimensions.width *0.69 , y: dimensions.height * 0.7 }},
-        { id: '2', type: 'formations', position: { x: dimensions.width / 2 + 355, y: dimensions.height / 2 + 200 }},
+        { id: '2', type: 'formations', position: { x: dimensions.width * 0.69, y: dimensions.height * 0.3 }},
         { id: '3', type: 'consciousness', position: { x: dimensions.width / 2 - 600, y: dimensions.height / 2 }},
         { id: '4', type: 'nameAndForm', position: { x: dimensions.width / 2 - 800, y: dimensions.height / 2 }},
         { id: '5', type: 'sixSenses', position: { x: dimensions.width / 2 - 1000, y: dimensions.height / 2 }},
