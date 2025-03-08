@@ -56,7 +56,7 @@ export function DarkModeToggle() {
   const {darkMode, setDarkMode} = useStore();
 
   return (
-    <div className="absolute top-4 right-4 z-10">
+    <div className="absolute top-4 right-4 z-10 p-4">
       <Button
         isIconOnly
         variant="ghost"

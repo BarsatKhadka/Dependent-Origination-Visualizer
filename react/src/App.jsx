@@ -8,7 +8,9 @@ function App() {
   return (
     <>
     <NextUIProvider>
+    <div className="flex justify-end">
     <DarkModeToggle/>
+    </div>
     <div className="flex justify-center items-center h-screen">
       
         <Flow />
