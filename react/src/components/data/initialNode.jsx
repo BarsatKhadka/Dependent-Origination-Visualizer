@@ -5,7 +5,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.59 : dimensions.width * 0.42, 
             y: dimensions.width < 640 && dimensions.height < 1100 ?  dimensions.height * 0.39 : dimensions.height * 0.5 
-        }
+        },
+        draggable: true
     },
     { 
         id: '1', 
@@ -13,7 +14,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.90 : dimensions.width * 0.69, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.6 : dimensions.height * 0.8
-        }
+        },
+        draggable: true
     },
     { 
         id: '2', 
@@ -21,7 +23,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.88 : dimensions.width * 0.69, 
             y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.48 : dimensions.height * 0.6
-        }
+        },
+        draggable: true
     },
     { 
         id: '3', 
@@ -29,7 +32,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.85 : dimensions.width * 0.69, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.29 : dimensions.height * 0.35 
-        }
+        },
+        draggable: true
     },
     { 
         id: '4', 
@@ -37,7 +41,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.83 : dimensions.width * 0.69, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.16 : dimensions.height * 0.15 
-        }
+        },
+        draggable: true
     },
     { 
         id: '5', 
@@ -45,7 +50,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.73 : dimensions.width * 0.5, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.01 : dimensions.height * 0.15 
-        }
+        },
+        draggable: true
     },
     { 
         id: '6', 
@@ -53,7 +59,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.46 : dimensions.width * 0.32, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.01 : dimensions.height * 0.15 
-        }
+        },
+        draggable: true
     },
     { 
         id: '7', 
@@ -61,7 +68,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.16 : dimensions.height * 0.15 
-        }
+        },
+        draggable: true
     },
     { 
         id: '8', 
@@ -69,7 +77,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.29 : dimensions.height * 0.35 
-        }
+        },
+        draggable: true
     },
     { 
         id: '9', 
@@ -77,7 +86,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.48 : dimensions.height * 0.6 
-        }
+        },
+        draggable: true
     },
     { 
         id: '10', 
@@ -85,7 +95,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.6 : dimensions.height * 0.8 
-        }
+        },
+        draggable: true
     },
     { 
         id: '11', 
@@ -93,7 +104,8 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.34, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.75 : dimensions.height * 0.8 
-        }
+        },
+        draggable: true
     },
     { 
         id: '12', 
@@ -101,6 +113,7 @@ export const getInitialNodes = (dimensions) => [
         position: { 
             x: dimensions.width < 640 ? dimensions.width * 0.73 : dimensions.width * 0.5, 
             y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.75 : dimensions.height * 0.8 
-        }
+        },
+        draggable: true
     }
 ];

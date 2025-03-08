@@ -1,5 +1,5 @@
 export const styles = {
-    background: 'red',
+    // background: 'red',
     width: '100%',
     height: 300,
   };
