@@ -10,24 +10,26 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
+
 export const Suffering = () => {
     const {isOpen, onOpen, onClose} = useDisclosure();
 
     return (
         <>
-            <div 
-                className="border-2 border-black rounded-md lg:px-16 lg:py-8 px-2 py-2 cursor-pointer"
-                onClick={onOpen}
-            >
-                <Handle
-                    type="target"
-                    position={Position.Bottom}
-                    id="left"
-                    style={{ background: '#555', width: '10px', height: '10px' }}
-                />
-                <p className="lg:text-2xl text-gray-800">Suffering</p>
-                <p className="text-gray-600 italic lg:ml-4">(Dukkha)</p>
-            </div>
+        <div
+            className="border border-gray-400  lg:px-16 lg:py-10 px-2 py-2 flex flex-col items-center"
+            onClick={onOpen}
+        >
+            <Handle
+                type="target"
+                position={Position.Bottom}
+                id="left"
+                style={{ background: '#555', width: '12px', height: '12px' }}
+            />
+            <p className="lg:text-3xl text-xl font-semibold text-gray-900">Suffering</p>
+            <p className="text-gray-700 italic lg:ml-4">(Dukkha)</p>
+        </div>
+
 
             <Drawer isOpen={isOpen} onClose={onClose} size="lg">
                 <DrawerContent>

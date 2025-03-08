@@ -5,9 +5,14 @@ import '@xyflow/react/dist/style.css';
 import { getInitialNodes } from './data/initialNode';
 import { initialEdges } from './data/initialEdges';
 import { nodeTypes } from './data/nodeTypes';
+import useStore from '../store';
+
 
 
 export function Flow() {
+
+    const {darkMode, setDarkMode} = useStore();
+
     const [dimensions, setDimensions] = React.useState(
         { width: window.innerWidth, height: window.innerHeight }
     );
@@ -33,6 +38,7 @@ export function Flow() {
             edges={initialEdges}
             nodeTypes={nodeTypes}
             fitView={true}
+            colorMode= {darkMode ? 'dark' : 'light'}
             fitViewOptions={{
                 padding: window.innerWidth < 640 ? 0.2 : 0.5,
                 minZoom: window.innerWidth < 640 ? 0.3 : 0.5,
