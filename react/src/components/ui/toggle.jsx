@@ -54,6 +54,18 @@ const SunIcon = (props) => (
 
 export function DarkModeToggle() {
   const {darkMode, setDarkMode} = useStore();
+  const toggleDarkMode = () =>{
+    const currentMode = !darkMode;
+    setDarkMode(currentMode);
+    if(String(currentMode) === 'true'){
+      localStorage.setItem('dark', 'true');
+    }
+    else{
+      localStorage.removeItem('dark')
+    }
+
+   
+  }
 
   return (
     <div className="absolute top-4 right-4 z-10 p-4">
@@ -61,9 +73,10 @@ export function DarkModeToggle() {
         isIconOnly
         variant="ghost"
         aria-label="Toggle dark mode"
-        onPress={() => setDarkMode(!darkMode)}
+        onPress={toggleDarkMode}
       >
         {darkMode ? <SunIcon /> : <MoonIcon />}
+      
       </Button>
     </div>
   );

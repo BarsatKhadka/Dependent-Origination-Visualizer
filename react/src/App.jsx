@@ -14,7 +14,6 @@ function App() {
     <DarkModeToggle/>
     </div>
     <div className="flex justify-center items-center h-screen">
-      
         <Flow />
     </div>
     </NextUIProvider>
