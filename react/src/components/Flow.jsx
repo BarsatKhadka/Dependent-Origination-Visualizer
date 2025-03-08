@@ -166,7 +166,7 @@ export function Flow() {
         { id: 'e6-7', source: '6', target: '7', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } },  // Contact → Feeling
         { id: 'e7-8', source: '7', target: '8', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } },  // Feeling → Craving
         { id: 'e8-9', source: '8', target: '9', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } },  // Craving → Clinging
-        { id: 'e9-10', source: '9', target: '10', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Clinging → Becoming
+        { id: 'e9-10', source: '9', target: '10', animated: false, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Clinging → Becoming
         { id: 'e10-11', source: '10', target: '11', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Becoming → Birth
         { id: 'e11-12', source: '11', target: '12', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Birth → Aging and Death
         { id: 'e12-0', source: '12', target: '0', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Aging and Death → Suffering
