@@ -36,9 +36,12 @@ export const Suffering = () => {
             <div className="flex flex-col items-center">
                 <p className="lg:text-3xl text-xl font-semibold text-amber-900">Suffering</p>
                 <p className="text-amber-700 italic lg:ml-4 mb-2">(Dukkha)</p>
-                <div className="mt-3 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm flex items-center gap-2 border border-amber-200 hover:bg-amber-200 transition-colors duration-300 shadow-sm">
-                    <span>Explore</span>
-                    <FaDharmachakra className="animate-spin-slow" />
+                <div className="mt-3 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm flex items-center gap-2 border border-amber-200 shadow-sm">
+                    <span style={{ 
+                        fontFamily: "'Cinzel'Palatino Linotype', 'Book Antiqua', Palatino, serif",
+                        letterSpacing: "1px"
+                    }}>explore</span>
+                    <FaDharmachakra />
                 </div>
             </div>
         </div>
