@@ -32,33 +32,55 @@ export const Suffering = () => {
             </div>
         </div>
 
-            <Drawer isOpen={isOpen} onClose={onClose} size="lg">
-                <DrawerContent>
+            <Drawer 
+                isOpen={isOpen} 
+                onClose={onClose} 
+                size="full"
+                classNames={{
+                    base: "shadow-none",
+                    wrapper: "w-full",
+                }}
+                motionProps={{
+                    variants: {
+                      enter: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.3, ease: "easeOut" }
+                      },
+                      exit: {
+                        opacity: 0,
+                        y: 0,
+                        transition: { duration: 0.2, ease: "easeIn" }
+                      },
+                    }
+                }}
+            >
+                <DrawerContent className="shadow-none">
                     {(onClose) => (
                         <>
-                            <DrawerHeader className="flex flex-col gap-1 bg-amber-50">
+                            <DrawerHeader className="flex flex-col gap-1 bg-white border-b border-amber-100">
                                 <h2 className="text-3xl font-bold text-amber-900">Dukkha (दुक्ख)</h2>
                                 <p className="text-amber-700">The First Noble Truth</p>
                             </DrawerHeader>
                             
-                            <DrawerBody>
-                                <div className="space-y-8 p-2">
+                            <DrawerBody className="bg-white">
+                                <div className="space-y-8 p-2 max-w-4xl mx-auto">
                                     <p className="text-xl leading-relaxed">
                                          Suffering is fundamental unsatisfactoriness in life.
                                     </p>
 
                                     <div>
-                                        <h3 className="text-2xl font-semibold mb-4 text-amber-900 border-b border-amber-200 pb-2">Three Types of Dukkha:</h3>
+                                        <h3 className="text-2xl font-semibold mb-4 text-amber-900 border-b border-amber-100 pb-2">Three Types of Dukkha:</h3>
                                         <ul className="space-y-4">
-                                            <li className="p-5 bg-amber-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                            <li className="p-5 bg-white border-l-4 border-amber-300">
                                                 <h4 className="font-semibold text-lg text-amber-900">Dukkha-dukkha (दुःख-दुःख)</h4>
                                                 <p className="mt-2">Obvious physical and mental suffering</p>
                                             </li>
-                                            <li className="p-5 bg-amber-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                            <li className="p-5 bg-white border-l-4 border-amber-300">
                                                 <h4 className="font-semibold text-lg text-amber-900">Viparinama-dukkha (विपरिणाम-दुःख)</h4>
                                                 <p className="mt-2">Suffering due to change</p>
                                             </li>
-                                            <li className="p-5 bg-amber-50 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                                            <li className="p-5 bg-white border-l-4 border-amber-300">
                                                 <h4 className="font-semibold text-lg text-amber-900">Sankhara-dukkha (संखार-दुःख)</h4>
                                                 <p className="mt-2">Subtle suffering of conditioned existence</p>
                                             </li>
@@ -66,20 +88,20 @@ export const Suffering = () => {
                                     </div>
 
                                     <div>
-                                        <h3 className="text-2xl font-semibold mb-4 text-amber-900 border-b border-amber-200 pb-2">Key Manifestations:</h3>
+                                        <h3 className="text-2xl font-semibold mb-4 text-amber-900 border-b border-amber-100 pb-2">Key Manifestations:</h3>
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 pl-6">
-                                            <li className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-amber-700"></span>Birth, aging, illness, and death</li>
-                                            <li className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-amber-700"></span>Separation from the pleasant</li>
-                                            <li className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-amber-700"></span>Association with the unpleasant</li>
-                                            <li className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-amber-700"></span>Not getting what one wants</li>
-                                            <li className="flex items-center gap-2"><span className="h-2 w-2 rounded-full bg-amber-700"></span>The five clinging aggregates</li>
+                                            <li className="flex items-center gap-2">• Birth, aging, illness, and death</li>
+                                            <li className="flex items-center gap-2">• Separation from the pleasant</li>
+                                            <li className="flex items-center gap-2">• Association with the unpleasant</li>
+                                            <li className="flex items-center gap-2">• Not getting what one wants</li>
+                                            <li className="flex items-center gap-2">• The five clinging aggregates</li>
                                         </ul>
                                     </div>
                                 </div>
                             </DrawerBody>
 
-                            <DrawerFooter className="border-t border-amber-200">
-                                <Button color="warning" variant="flat" onPress={onClose} className="font-medium">
+                            <DrawerFooter className="border-t border-amber-100 bg-white">
+                                <Button color="warning" variant="light" onPress={onClose} className="font-medium">
                                     Close
                                 </Button>
                             </DrawerFooter>
