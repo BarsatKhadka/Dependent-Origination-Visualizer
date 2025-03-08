@@ -32,7 +32,7 @@ export function Flow() {
 
 
     return (
-        <div style={{ height: '100%', width: '100%' }}>
+        <div style={{ height: '100%', width: '100%', color: darkMode ? '#ffffff' : '#000000' }}>
             <ReactFlow 
             nodes={getInitialNodes(dimensions)} 
             edges={initialEdges}
