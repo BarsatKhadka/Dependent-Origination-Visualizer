@@ -172,10 +172,7 @@ export function Flow() {
         { id: 'e12-0', source: '12', target: '0', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Aging and Death → Suffering
         { id: 'e0-1', source: '0', target: '1', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Suffering → Ignorance (completing the cycle)
         
-        // Additional connection to show interdependence
-        { id: 'e3-0', source: '3', target: '0', animated: false, style: { stroke: '#FF6B6B', strokeWidth: 1, strokeDasharray: '5, 5' } }, // Consciousness → Suffering
-        { id: 'e7-0', source: '7', target: '0', animated: false, style: { stroke: '#FF6B6B', strokeWidth: 1, strokeDasharray: '5, 5' } }, // Feeling → Suffering
-        { id: 'e8-0', source: '8', target: '0', animated: false, style: { stroke: '#FF6B6B', strokeWidth: 1, strokeDasharray: '5, 5' } } // Craving → Suffering
+        
     ];
 
     return (

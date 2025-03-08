@@ -10,9 +10,14 @@ export const AgingAndDeath12 = () => {
                                             id="left"
                                             style={{ background: '#555', width: '10px', height: '10px' }}
                                           />
-                                   
-            <p className="lg:text-2xl text-gray-800">Aging & Death</p>
-            <p className="text-gray-600 italic lg:ml-4">(Bhava)</p>
-        </div>
+                                    <Handle
+                                        type="source"
+                                        position={Position.Top}
+                                        id="right"
+                                        style={{ background: '#555', width: '10px', height: '10px' }}
+                                        />
+        <p className="lg:text-2xl text-gray-800">Aging & Death</p>
+        <p className="text-gray-600 italic lg:ml-4">(Bhava)</p>
+    </div>
     )
 }
