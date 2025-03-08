@@ -18,14 +18,23 @@ export const Suffering = () => {
     return (
         <>
         <div
-            className="border-2 border-amber-700 rounded-lg shadow-md lg:px-16 lg:py-10 px-4 py-3 flex flex-col items-center transition-all duration-500 hover:shadow-lg hover:bg-amber-50 cursor-pointer relative group"
+            className="border-2 border-amber-500 rounded-lg shadow-md lg:px-16 lg:py-10 px-4 py-3 flex flex-col items-center transition-all duration-500 hover:shadow-lg hover:bg-amber-50 cursor-pointer relative group"
             onClick={onOpen}
             style={
                 {
-                    backgroundColor: 'white',
+                    backgroundColor: '#f5f5f5',
+                    borderColor: '#f59e0b',
                     color: 'black',
                 }
             }
+            //used this because of react flow library
+            onMouseEnter={(e) =>{
+                e.currentTarget.style.backgroundColor = '#fef3c7'
+            }}
+            onMouseLeave={(e)=>{
+                e.currentTarget.style.backgroundColor = '#f5f5f5'
+            }}
+
         >
             <Handle
                 type="target"
@@ -34,8 +43,12 @@ export const Suffering = () => {
                 style={{ background: '#78350f', width: '12px', height: '12px' }}
             />
             <div className="flex flex-col items-center">
-                <p className="lg:text-3xl text-xl font-semibold text-amber-900">Suffering</p>
-                <p className="text-amber-700 italic lg:ml-4 mb-2">(Dukkha)</p>
+                <p className="lg:text-3xl text-xl font-semibold text-amber-900" style={{ 
+                    fontFamily: "'Philosopher', 'Palatino Linotype', 'Book Antiqua', serif",
+                }}>Suffering</p>
+                <p className="text-amber-700 italic lg:ml-4 mb-2" style={{ 
+                    fontFamily: "'Spectral', 'Georgia', serif",
+                }}>(Dukkha)</p>
                 <div className="mt-3 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm flex items-center gap-2 border border-amber-200 shadow-sm">
                     <span style={{ 
                         fontFamily: "'Cinzel', 'Palatino Linotype', 'Book Antiqua', Palatino, serif",
@@ -74,8 +87,12 @@ export const Suffering = () => {
                     {(onClose) => (
                         <>
                             <DrawerHeader className="flex flex-col gap-1 bg-amber-50/50 border-b border-amber-100">
-                                <h2 className="text-3xl font-bold text-amber-900">Dukkha (दुक्ख)</h2>
-                                <p className="text-amber-700">The First Noble Truth</p>
+                                <h2 className="text-3xl font-bold text-amber-900" style={{ 
+                                    fontFamily: "'Philosopher', 'Palatino Linotype', 'Book Antiqua', serif",
+                                }}>Dukkha (दुक्ख)</h2>
+                                <p className="text-amber-700" style={{ 
+                                    fontFamily: "'Spectral', 'Georgia', serif",
+                                }}>The First Noble Truth</p>
                             </DrawerHeader>
                             
                             <DrawerBody className="bg-amber-50/20">
