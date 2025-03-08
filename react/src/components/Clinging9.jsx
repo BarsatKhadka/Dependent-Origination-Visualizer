@@ -9,7 +9,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-import { FaChain, FaUnlink } from "react-icons/fa";
+import { FaLink, FaUnlink } from "react-icons/fa";
 
 export const Clinging9 = () => {
   const {isOpen, onOpen, onClose} = useDisclosure();
@@ -57,7 +57,7 @@ export const Clinging9 = () => {
               fontFamily: "'Philosopher', 'Palatino Linotype', 'Book Antiqua', serif",
               letterSpacing: "1px"
             }}>ATTACHMENT</span>
-            <FaChain className="text-amber-700" />
+            <FaLink className="text-amber-700" />
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@ export const Clinging9 = () => {
             <>
               <DrawerHeader className="flex flex-col gap-1 bg-amber-50/50 border-b border-amber-100">
                 <div className="flex items-center gap-2">
-                  <FaChain className="text-amber-700 text-xl" />
+                  <FaLink className="text-amber-700 text-xl" />
                   <h2 className="text-3xl font-bold text-amber-900" style={{ 
                     fontFamily: "'Philosopher', 'Palatino Linotype', 'Book Antiqua', serif",
                   }}>Upādāna (उपादान)</h2>
