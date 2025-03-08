@@ -26,21 +26,31 @@ const SunIcon = (props) => (
     role="presentation"
     viewBox="0 0 24 24"
     width="24"
+    className="text-white"
     {...props}
   >
-    <g fill="currentColor">
-      <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" />
-      <path d="M12 8a4 4 0 100-8 4 4 0 000 8z" />
-      <path d="M12 24a4 4 0 100-8 4 4 0 000 8z" />
-      <path d="M20 12a4 4 0 10-8 0 4 4 0 008 0z" />
-      <path d="M4 12a4 4 0 108 0 4 4 0 00-8 0z" />
-      <path d="M17.657 6.343a4 4 0 10-5.657 5.657 4 4 0 005.657-5.657z" />
-      <path d="M6.343 17.657a4 4 0 105.657-5.657 4 4 0 00-5.657 5.657z" />
-      <path d="M17.657 17.657a4 4 0 10-5.657-5.657 4 4 0 005.657 5.657z" />
-      <path d="M6.343 6.343a4 4 0 105.657 5.657 4 4 0 00-5.657-5.657z" />
-    </g>
+    <circle cx="12" cy="12" r="5" fill="currentColor" />
+    
+    <path
+      fill="currentColor"
+      d="M12 2v4M12 18v4M2 12h4M18 12h4"
+      strokeWidth="2"
+      stroke="currentColor"
+      strokeLinecap="round"
+    />
+    
+    <path
+      fill="currentColor"
+      d="M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"
+      strokeWidth="2"
+      stroke="currentColor"
+      strokeLinecap="round"
+    />
+    
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="0.5" strokeOpacity="0.3" />
   </svg>
 );
+
 
 export function DarkModeToggle() {
   const {darkMode, setDarkMode} = useStore();
