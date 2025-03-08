@@ -18,7 +18,7 @@ export const Suffering = () => {
     return (
         <>
         <div
-            className="border-2 border-amber-500 rounded-lg shadow-md lg:px-16 lg:py-10 px-4 py-3 flex flex-col items-center transition-all duration-500 hover:shadow-lg hover:bg-amber-50 cursor-pointer relative group"
+            className="border-2 border-amber-500 rounded-lg shadow-md px-6 py-4 relative group"
             onClick={onOpen}
             style={
                 {
@@ -49,11 +49,11 @@ export const Suffering = () => {
                 <p className="text-amber-700 italic lg:ml-4 mb-2" style={{ 
                     fontFamily: "'Spectral', 'Georgia', serif",
                 }}>(Dukkha)</p>
-                <div className="mt-3 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm flex items-center gap-2 border border-amber-200 shadow-sm">
+                <div className="mt-3 bg-amber-100 text-amber-800 p-1 rounded-full text-sm flex items-center gap-2 border border-amber-200 shadow-sm">
                     <span style={{ 
                         fontFamily: "'Cinzel', 'Palatino Linotype', 'Book Antiqua', Palatino, serif",
                         letterSpacing: "1px"
-                    }}>EXPLORE</span>
+                    }}>explore</span>
                     <FaDharmachakra />
                 </div>
             </div>
