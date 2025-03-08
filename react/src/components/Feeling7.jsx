@@ -12,8 +12,8 @@ export const Feeling7 = () => {
                   />
             <Handle
                 type="source"
-                position={Position.Left}
-                id="left"
+                position={Position.Bottom}
+                id="bottom"
                 style={{ background: '#555', width: '10px', height: '10px' }}
                 />
             <p className="lg:text-2xl text-gray-800">Feeling</p>
