@@ -26,9 +26,6 @@ export function Flow() {
     }, []);
 
 
-
-
-
     return (
         <div style={{ height: '100%', width: '100%' }}>
             <ReactFlow 
