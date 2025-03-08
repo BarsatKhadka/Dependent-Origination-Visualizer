@@ -12,8 +12,8 @@ export const getInitialNodes = (dimensions) => [
         id: '1', 
         type: 'ignorance', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.90 : dimensions.width * 0.69, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.6 : dimensions.height * 0.8
+            x: dimensions.width < 640 ? dimensions.width * 0.99 : dimensions.width * 0.69, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.99 : dimensions.height * 0.8
         },
         draggable: true
     },
@@ -21,8 +21,8 @@ export const getInitialNodes = (dimensions) => [
         id: '2', 
         type: 'formations', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.88 : dimensions.width * 0.69, 
-            y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.48 : dimensions.height * 0.6
+            x: dimensions.width < 640 ? dimensions.width * 0.99 : dimensions.width * 0.69, 
+            y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.80 : dimensions.height * 0.6
         },
         draggable: true
     },
@@ -30,8 +30,8 @@ export const getInitialNodes = (dimensions) => [
         id: '3', 
         type: 'consciousness', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.85 : dimensions.width * 0.69, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.29 : dimensions.height * 0.35 
+            x: dimensions.width < 640 ? dimensions.width * 0.99 : dimensions.width * 0.69, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.60 : dimensions.height * 0.35 
         },
         draggable: true
     },
@@ -39,8 +39,8 @@ export const getInitialNodes = (dimensions) => [
         id: '4', 
         type: 'nameAndForm', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.83 : dimensions.width * 0.69, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.16 : dimensions.height * 0.15 
+            x: dimensions.width < 640 ? dimensions.width * 0.999 : dimensions.width * 0.69, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.20 : dimensions.height * 0.15 
         },
         draggable: true
     },
@@ -48,8 +48,8 @@ export const getInitialNodes = (dimensions) => [
         id: '5', 
         type: 'sixSenses', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.73 : dimensions.width * 0.5, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.01 : dimensions.height * 0.15 
+            x: dimensions.width < 640 ? dimensions.width * 0.99 : dimensions.width * 0.5, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.02 : dimensions.height * 0.15 
         },
         draggable: true
     },
@@ -57,8 +57,8 @@ export const getInitialNodes = (dimensions) => [
         id: '6', 
         type: 'contact', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.46 : dimensions.width * 0.32, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.01 : dimensions.height * 0.15 
+            x: dimensions.width < 640 ? dimensions.width * 0.30 : dimensions.width * 0.32, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0 : dimensions.height * 0.15 
         },
         draggable: true
     },
@@ -66,8 +66,8 @@ export const getInitialNodes = (dimensions) => [
         id: '7', 
         type: 'feeling', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.16 : dimensions.height * 0.15 
+            x: dimensions.width < 640 ? dimensions.width * 0 : dimensions.width * 0.13, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.20 : dimensions.height * 0.15 
         },
         draggable: true
     },
@@ -75,8 +75,8 @@ export const getInitialNodes = (dimensions) => [
         id: '8', 
         type: 'craving', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.29 : dimensions.height * 0.35 
+            x: dimensions.width < 640 ? dimensions.width * 0 : dimensions.width * 0.13, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.35 : dimensions.height * 0.35 
         },
         draggable: true
     },
@@ -84,8 +84,8 @@ export const getInitialNodes = (dimensions) => [
         id: '9', 
         type: 'clinging', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.48 : dimensions.height * 0.6 
+            x: dimensions.width < 640 ? dimensions.width * 0: dimensions.width * 0.13, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.50 : dimensions.height * 0.6 
         },
         draggable: true
     },
@@ -93,8 +93,8 @@ export const getInitialNodes = (dimensions) => [
         id: '10', 
         type: 'becoming', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.25 : dimensions.width * 0.13, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.6 : dimensions.height * 0.8 
+            x: dimensions.width < 640 ? dimensions.width * 0 : dimensions.width * 0.13, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.65 : dimensions.height * 0.8 
         },
         draggable: true
     },
@@ -102,8 +102,8 @@ export const getInitialNodes = (dimensions) => [
         id: '11', 
         type: 'birth', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.45 : dimensions.width * 0.34, 
-            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.75 : dimensions.height * 0.8 
+            x: dimensions.width < 640 ? dimensions.width * 0 : dimensions.width * 0.34, 
+            y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.80 : dimensions.height * 0.8 
         },
         draggable: true
     },
@@ -111,8 +111,8 @@ export const getInitialNodes = (dimensions) => [
         id: '12', 
         type: 'agingAndDeath', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0.73 : dimensions.width * 0.5, 
-            y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.75 : dimensions.height * 0.8 
+            x: dimensions.width < 640 ? dimensions.width * 0.3 : dimensions.width * 0.5, 
+            y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.99 : dimensions.height * 0.8 
         },
         draggable: true
     }
