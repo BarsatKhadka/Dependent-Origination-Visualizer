@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { ReactFlow, Controls, Background , MiniMap } from '@xyflow/react';
+import React, { useEffect, useState, useCallback} from 'react';
+import { ReactFlow, Controls, Background , MiniMap, applyNodeChanges, applyEdgeChanges } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
 import { getInitialNodes } from './data/initialNode';
@@ -21,6 +21,18 @@ export function Flow() {
 
     const [showMiniMap, setShowMiniMap] = React.useState(window.innerWidth >= 768);
 
+    
+    const [nodes, setNodes] = useState(getInitialNodes(dimensions));
+    const [edges, setEdges] = useState(initialEdges);
+    const onNodesChange = useCallback(
+        (changes) => setNodes((nds) => applyNodeChanges(changes, nds)),
+        []
+    );
+    const onEdgesChange = useCallback(
+        (changes) => setEdges((eds) => applyEdgeChanges(changes, eds)),
+        []
+    );
+
     useEffect(() => {
         const handleResize = () => {
             setDimensions({ width: window.innerWidth, height: window.innerHeight });
@@ -35,14 +47,20 @@ export function Flow() {
         };
     }, []);
 
+    //update nodes with new dimension when node change
+    useEffect(() => {
+        setNodes(getInitialNodes(dimensions));
+    }, [dimensions]);
 
     return (
         <div style={{ height: '100%', width: '100%', color: darkMode ? '#ffffff' : '#000000' }}>
             
             <ReactFlow 
-            nodes={getInitialNodes(dimensions)} 
-            edges={initialEdges}
+            nodes={nodes} 
+            edges={edges}
             nodeTypes={nodeTypes}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
             fitView={true}
             colorMode= {darkMode ? 'dark' : 'light'}
             style={styles}
