@@ -13,7 +13,9 @@ function App() {
       <NextUIProvider>
         <div className="fixed top-6 left-6 z-50 flex flex-col gap-4">
           <GitHubIcon />
-          <Navbar />  
+        </div>
+        <div className="fixed top-24 left-10 z-50 flex flex-col gap-4">
+          <Navbar />
         </div>
 
         <div className="fixed top-6 right-6 z-50">
