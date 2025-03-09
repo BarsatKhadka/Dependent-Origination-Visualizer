@@ -51,7 +51,17 @@ export function Flow() {
                 maxZoom: 2
             }}
             >
-                {showMiniMap && <MiniMap />}
+                {showMiniMap && (
+                    <MiniMap 
+                        style={{
+                            bottom: 0,
+                            left: 30,
+                            right: 'auto'
+                        }}
+                        zoomable 
+                        pannable
+                    />
+                )}
                 <Background />
                 <Controls />
             </ReactFlow>
