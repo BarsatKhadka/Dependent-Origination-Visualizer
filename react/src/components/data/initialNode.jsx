@@ -15,7 +15,8 @@ export const getInitialNodes = (dimensions) => [
             x: dimensions.width < 640 ? dimensions.width * 0.99 : dimensions.width * 0.69, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.99 : dimensions.height * 0.8
         },
-        draggable: true
+        draggable: true,
+        
     },
     { 
         id: '2', 
@@ -24,7 +25,8 @@ export const getInitialNodes = (dimensions) => [
             x: dimensions.width < 640 ? dimensions.width * 0.99 : dimensions.width * 0.69, 
             y: dimensions.width < 640 && dimensions.height < 1100? dimensions.height * 0.80 : dimensions.height * 0.6
         },
-        draggable: true
+        draggable: true,
+        
     },
     { 
         id: '3', 

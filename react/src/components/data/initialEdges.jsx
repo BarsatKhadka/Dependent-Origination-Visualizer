@@ -11,5 +11,4 @@ export const initialEdges = [
     { id: 'e10-11', source: '10', target: '11', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Becoming → Birth
     { id: 'e11-12', source: '11', target: '12', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Birth → Aging and Death
     { id: 'e12-0', source: '12', target: '0', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Aging and Death → Suffering
-    { id: 'e0-1', source: '0', target: '1', animated: true, style: { stroke: '#6B5B95', strokeWidth: 2 } }, // Suffering → Ignorance (completing the cycle)
 ];
