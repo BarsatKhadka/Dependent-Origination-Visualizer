@@ -3,12 +3,14 @@ import '@xyflow/react/dist/style.css';
 import { NextUIProvider } from "@nextui-org/react";
 import { DarkModeToggle } from "./components/ui/toggle";
 import GitHubIcon from "./components/ui/githubIcon";
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
   
   return (
     <>
+    <Analytics>
       <NextUIProvider>
         <GitHubIcon />
         <div className="flex justify-end">
@@ -28,6 +30,7 @@ function App() {
           <Flow />
         </div>
       </NextUIProvider>
+      </Analytics>
     </>
   );
 }
