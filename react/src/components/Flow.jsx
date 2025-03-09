@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ReactFlow, Controls, Background , addEdge, useEdgesState,useNodesState } from '@xyflow/react';
+import { ReactFlow, Controls, Background , MiniMap } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
 import { getInitialNodes } from './data/initialNode';
@@ -48,6 +48,7 @@ export function Flow() {
                 maxZoom: 2
             }}
             >
+                <MiniMap />
                 <Background />
                 <Controls />
             </ReactFlow>
