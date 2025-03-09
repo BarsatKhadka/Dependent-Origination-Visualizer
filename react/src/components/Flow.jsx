@@ -19,9 +19,12 @@ export function Flow() {
         { width: window.innerWidth, height: window.innerHeight }
     );
 
+    const [showMiniMap, setShowMiniMap] = React.useState(window.innerWidth >= 768);
+
     useEffect(() => {
         const handleResize = () => {
             setDimensions({ width: window.innerWidth, height: window.innerHeight });
+            setShowMiniMap(window.innerWidth >= 768); 
         };
 
         window.addEventListener('resize', handleResize);
@@ -48,7 +51,7 @@ export function Flow() {
                 maxZoom: 2
             }}
             >
-                <MiniMap />
+                {showMiniMap && <MiniMap />}
                 <Background />
                 <Controls />
             </ReactFlow>
