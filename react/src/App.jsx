@@ -11,6 +11,7 @@ function App() {
     <>
       <NextUIProvider>
         <GitHubIcon />
+        {/* <Navbar/> */}
 
         <div className="flex justify-end">
           <DarkModeToggle />

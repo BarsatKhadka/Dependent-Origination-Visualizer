@@ -22,7 +22,7 @@ const GitHubIcon = () => {
   }, []);
 
   return (
-    <div className="absolute z-50">
+    <div className="absolute lg:top-4 top-2 lg:left-4 left-2  z-50">
       <a
         href="https://github.com/BarsatKhadka/Dependent-Origination-Visualizer"
         target="_blank"

@@ -68,7 +68,7 @@ export function DarkModeToggle() {
   }
 
   return (
-    <div className="absolute z-10 ">
+    <div className="absolute lg:top-4 lg:right-4 top-2 right-2 z-10 ">
       <Button
         isIconOnly
         variant="ghost"
