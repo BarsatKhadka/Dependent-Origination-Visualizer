@@ -10,7 +10,6 @@ function App() {
   
   return (
     <>
-    <Analytics>
       <NextUIProvider>
         <GitHubIcon />
         <div className="flex justify-end">
@@ -30,7 +29,7 @@ function App() {
           <Flow />
         </div>
       </NextUIProvider>
-      </Analytics>
+      <Analytics/>
     </>
   );
 }
