@@ -53,7 +53,8 @@ export function Flow() {
     }, [dimensions]);
 
     return (
-        <div style={{ height: '100%', width: '100%', color: darkMode ? '#ffffff' : '#000000' }}>
+        <div style={{ height: '100%', width: '100%', color: darkMode ? '#ffffff' : '#000000' }}
+        >
             
             <ReactFlow 
             nodes={nodes} 

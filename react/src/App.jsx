@@ -1,25 +1,27 @@
 import { Flow } from "./components/Flow";
 import '@xyflow/react/dist/style.css';
-import { Navbar, NextUIProvider } from "@nextui-org/react";
+import { NextUIProvider } from "@nextui-org/react"; 
 import { DarkModeToggle } from "./components/ui/toggle";
 import GitHubIcon from "./components/ui/githubIcon";
 import { Analytics } from "@vercel/analytics/react"
 import { NorbuAI } from "./components/ui/norbuAI";
+import { Navbar } from "./components/navbar/Navbar"; 
 
 function App() {
   return (
     <>
       <NextUIProvider>
-        <GitHubIcon />
-        {/* <Navbar/> */}
+        <div className="fixed top-6 left-6 z-50 flex flex-col gap-4">
+          <GitHubIcon />
+          <Navbar />  
+        </div>
 
-        <div className="flex justify-end">
+        <div className="fixed top-6 right-6 z-50">
           <DarkModeToggle />
         </div>
 
-
         <div 
-          className="flex justify-center items-center h-screen"
+            className="flex justify-center items-center h-screen "
           style={{
             backgroundColor: '#fafafa', 
             backgroundImage: `
@@ -31,13 +33,10 @@ function App() {
         >
           <Flow />
         </div>
-        
 
-          <NorbuAI />
-
-
+        <NorbuAI />
+        <Analytics />
       </NextUIProvider>
-      <Analytics />
     </>
   );
 }
