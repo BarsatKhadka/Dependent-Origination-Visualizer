@@ -3,10 +3,10 @@ import '@xyflow/react/dist/style.css';
 import { NextUIProvider } from "@nextui-org/react";
 import { DarkModeToggle } from "./components/ui/toggle";
 import GitHubIcon from "./components/ui/githubIcon";
-import useStore from "./store";
+
 
 function App() {
-  const {darkMode , setDarkMode} = useStore();
+  
   return (
     <>
       <NextUIProvider>
