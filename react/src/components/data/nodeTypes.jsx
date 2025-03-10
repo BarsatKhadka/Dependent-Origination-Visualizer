@@ -1,16 +1,16 @@
-import { Suffering } from '../Suffering';
-import { Ignorance1 } from '../Ignorance1';
-import { VolitionalAct2 } from '../VolitionalAct2';
-import { Consciousness3 } from '../Consciousness3';
-import { NameAndForm4 } from '../NameAndForm4';
-import { SixSenses5 } from '../SixSenses5';
-import { Contact6 } from '../Contact6';
-import { Feeling7 } from '../Feeling7';
-import { Craving8 } from '../Craving8';
-import { Clinging9 } from '../Clinging9';
-import { Becoming10 } from '../Becoming10';
-import { Birth11 } from '../Birth11';
-import { AgingAndDeath12 } from '../AgingAndDeath12';
+import { Suffering } from '../dependent-org/Suffering';
+import { Ignorance1 } from '../dependent-org/Ignorance1';
+import { VolitionalAct2 } from '../dependent-org/VolitionalAct2';
+import { Consciousness3 } from '../dependent-org/Consciousness3';
+import { NameAndForm4 } from '../dependent-org/NameAndForm4';
+import { SixSenses5 } from '../dependent-org/SixSenses5';
+import { Contact6 } from '../dependent-org/Contact6';
+import { Feeling7 } from '../dependent-org/Feeling7';
+import { Craving8 } from '../dependent-org/Craving8';
+import { Clinging9 } from '../dependent-org/Clinging9';
+import { Becoming10 } from '../dependent-org/Becoming10';
+import { Birth11 } from '../dependent-org/Birth11';
+import { AgingAndDeath12 } from '../dependent-org/AgingAndDeath12';
 
 export const nodeTypes = {
     suffering: Suffering,
