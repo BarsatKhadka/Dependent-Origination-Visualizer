@@ -104,7 +104,7 @@ export const getInitialNodes = (dimensions) => [
         id: '11', 
         type: 'birth', 
         position: { 
-            x: dimensions.width < 640 ? dimensions.width * 0 : dimensions.width * 0.34, 
+            x: dimensions.width < 640 ? dimensions.width * 0 : dimensions.width * 0.32, 
             y: dimensions.width < 640 && dimensions.height < 1100 ? dimensions.height * 0.80 : dimensions.height * 0.8 
         },
         draggable: true

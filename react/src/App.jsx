@@ -23,16 +23,7 @@ function App() {
         </div>
 
         <div 
-            className="flex justify-center items-center h-screen "
-          style={{
-            backgroundColor: '#fafafa', 
-            backgroundImage: `
-              radial-gradient(circle at center, rgba(180, 200, 220, 0.1) 10%, transparent 10%),
-              repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(180, 200, 220, 0.05) 10px, rgba(180, 200, 220, 0.05) 20px)
-            `,
-            backgroundSize: '100px 100px', 
-          }}
-        >
+            className="flex justify-center items-center h-screen lg:mt-8">
           <Flow />
         </div>
 
