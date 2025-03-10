@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import useStore from '../../store';
 
 export const NorbuAI = () => {
     const [showTooltip, setShowTooltip] = useState(false);
+    const { darkMode } = useStore();
 
     return (
         <div 
@@ -75,7 +77,9 @@ export const NorbuAI = () => {
                         style={{
                             width: window.innerWidth <= 640 ? '75px' : '100px',
                             borderRadius: '50%',
-                            transition: 'transform 0.2s ease-in-out',
+                            transition: 'all 0.2s ease-in-out',
+                            border: darkMode ? '2px solid rgba(255, 255, 255, 0.8)' : 'none',
+                            padding: '2px'
                         }}
                         onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
