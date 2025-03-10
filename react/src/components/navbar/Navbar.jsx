@@ -24,7 +24,7 @@ export const Navbar = () => {
   );
 
   const MobileWidget = () => (
-    <div className="sm:hidden fixed bottom-20 left-6 z-50">
+    <div className="sm:hidden fixed top-20 left-8 z-50">
       <button
         onClick={() => setIsExpanded(true)}
         className={`
@@ -70,7 +70,6 @@ export const Navbar = () => {
               <path d="M18 6L6 18M6 6l12 12"></path>
             </svg>
           </button>
-          <span className="text-lg font-mono">Buddhist Concepts</span>
         </div>
         
         <div className="flex flex-col gap-3">
