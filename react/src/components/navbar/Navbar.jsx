@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/react";
 export const Navbar = () => {
   const { darkMode } = useStore();
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isDesktopExpanded, setIsDesktopExpanded] = useState(false);
   
   const buddhistConcepts = [
     { id: 'sunyata', label: 'Śūnyatā (Emptiness)' },
@@ -13,9 +14,17 @@ export const Navbar = () => {
     { id: 'madhyamaka', label: 'Madhyamaka (Middle way)' }
   ];
 
-  
+  const DhammaWheel = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="12" cy="12" r="10" strokeWidth="1.5"/>
+      <circle cx="12" cy="12" r="4" strokeWidth="1.5"/>
+      <path d="M12 2v20M2 12h20" strokeWidth="1.5"/>
+      <path d="M12 12L4.93 4.93M12 12l7.07-7.07M12 12l7.07 7.07M12 12l-7.07 7.07" strokeWidth="1.5"/>
+    </svg>
+  );
+
   const MobileWidget = () => (
-    <div className="sm:hidden fixed top-18 left-6 z-50">
+    <div className="sm:hidden fixed bottom-20 left-6 z-50">
       <button
         onClick={() => setIsExpanded(true)}
         className={`
@@ -27,17 +36,11 @@ export const Navbar = () => {
           }
         `}
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <circle cx="12" cy="12" r="10" strokeWidth="1.5"/>
-          <circle cx="12" cy="12" r="4" strokeWidth="1.5"/>
-          <path d="M12 2v20M2 12h20" strokeWidth="1.5"/>
-          <path d="M12 12L4.93 4.93M12 12l7.07-7.07M12 12l7.07 7.07M12 12l-7.07 7.07" strokeWidth="1.5"/>
-        </svg>
+        <DhammaWheel />
       </button>
     </div>
   );
 
-  
   const MobileMenu = () => (
     <div 
       className={`
@@ -67,8 +70,9 @@ export const Navbar = () => {
               <path d="M18 6L6 18M6 6l12 12"></path>
             </svg>
           </button>
-          <span className="text-lg font-medium">Buddhist Concepts</span>
+          <span className="text-lg font-mono">Buddhist Concepts</span>
         </div>
+        
         <div className="flex flex-col gap-3">
           {buddhistConcepts.map(concept => (
             <Button
@@ -91,13 +95,12 @@ export const Navbar = () => {
     </div>
   );
 
-  
   return (
     <>
       <div
         className={`
           hidden sm:flex items-center gap-3 px-5 py-2.5 rounded-lg
-          transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm mb-4
+          transition-all duration-300 shadow-lg hover:shadow-xl backdrop-blur-sm
           ${darkMode
             ? 'bg-gray-800/95 text-white border border-gray-700'
             : 'bg-white/95 text-gray-900 border border-gray-200'
@@ -105,34 +108,51 @@ export const Navbar = () => {
         `}
       >
         <span
-          className="text-sm lg:text-base tracking-wide font-medium"
+          className="text-sm lg:text-base tracking-wide font-medium whitespace-nowrap"
           style={{ fontFamily: "'Roboto Mono', monospace" }}
         >
-          Visualize on:
+          Visualize on: (click the wheel)
         </span>
-        <div className="h-4 w-px bg-gray-400/50 mx-1"></div>
-        {buddhistConcepts.map(concept => (
-          <Button
-            key={concept.id}
-
-            className={`
-              text-xs lg:text-sm px-3 py-1.5 rounded-md 
-              transition-all duration-200 
-              font-medium
-              ${darkMode 
-                ? 'bg-indigo-600 hover:bg-indigo-700 text-white' 
-                : 'bg-indigo-200 hover:bg-indigo-200 text-indigo-800'
-              }
-              focus:outline-none focus:ring-2 
-              ${darkMode ? 'focus:ring-indigo-500' : 'focus:ring-indigo-400'}
-              shadow-sm hover:shadow
-            `}
-            style={{ fontFamily: "'Roboto Mono', monospace" }}
-            data-node-type={concept.id}
-          >
-            {concept.label}
-          </Button>
-        ))}
+        <button
+          onClick={() => setIsDesktopExpanded(!isDesktopExpanded)}
+          className={`
+            p-2 rounded-full transition-all duration-300
+            ${darkMode 
+              ? 'hover:bg-gray-700' 
+              : 'hover:bg-gray-100'
+            }
+          `}
+          aria-label="Toggle concept menu"
+        >
+          <DhammaWheel /> 
+        </button>
+        
+        <div className={`
+          flex gap-2 items-center overflow-hidden transition-all duration-300
+          ${isDesktopExpanded ? 'w-auto opacity-100' : 'w-0 opacity-0'}
+        `}>
+          {buddhistConcepts.map(concept => (
+            <Button
+              key={concept.id}
+              className={`
+                text-xs lg:text-sm px-3 py-1.5 rounded-md whitespace-nowrap
+                transition-all duration-200 
+                font-medium
+                ${darkMode 
+                  ? 'bg-indigo-600 hover:bg-indigo-700 text-white' 
+                  : 'bg-indigo-200 hover:bg-indigo-300 text-indigo-800'
+                }
+                focus:outline-none focus:ring-2 
+                ${darkMode ? 'focus:ring-indigo-500' : 'focus:ring-indigo-400'}
+                shadow-sm hover:shadow
+              `}
+              style={{ fontFamily: "'Roboto Mono', monospace" }}
+              data-node-type={concept.id}
+            >
+              {concept.label}
+            </Button>
+          ))}
+        </div>
       </div>
       <MobileWidget />
       {isExpanded && <MobileMenu />}
