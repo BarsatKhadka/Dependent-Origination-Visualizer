@@ -9,6 +9,7 @@ const MoonIcon = (props) => (
     role="presentation"
     viewBox="0 0 24 24"
     width="24"
+    className="text-black"
     {...props}
   >
     <path

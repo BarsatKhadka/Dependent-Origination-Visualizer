@@ -10,8 +10,9 @@ import { Navbar } from "./components/navbar/Navbar";
 function App() {
   return (
     <>
+    <div className="dark">
       <NextUIProvider>
-        <div className="fixed top-6 left-6 z-50 flex flex-col gap-4">
+        <div className="fixed top-3 left-6 z-50 flex flex-col gap-4">
           <GitHubIcon />
         </div>
         <div className="fixed top-24 left-10 z-50 flex flex-col gap-4">
@@ -23,13 +24,14 @@ function App() {
         </div>
 
         <div 
-            className="flex justify-center items-center h-screen lg:mt-8">
+            className="flex justify-center items-center h-screen ">
           <Flow />
         </div>
 
         <NorbuAI />
         <Analytics />
       </NextUIProvider>
+      </div>
     </>
   );
 }
