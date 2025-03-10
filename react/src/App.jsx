@@ -6,8 +6,10 @@ import GitHubIcon from "./components/ui/githubIcon";
 import { Analytics } from "@vercel/analytics/react"
 import { NorbuAI } from "./components/ui/norbuAI";
 import { Navbar } from "./components/navbar/Navbar"; 
+import useStore  from "./store";
 
 function App() {
+  const{visualizeOn} = useStore();
   return (
     <>
     <div className="dark">
@@ -23,10 +25,13 @@ function App() {
           <DarkModeToggle />
         </div>
 
-        <div 
+    {visualizeOn === 2 && 
+            <div 
             className="flex justify-center items-center h-screen ">
           <Flow />
         </div>
+    }
+
 
         <NorbuAI />
         <Analytics />

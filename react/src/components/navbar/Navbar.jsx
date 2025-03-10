@@ -3,15 +3,18 @@ import useStore from '../../store';
 import { Button } from "@nextui-org/react";
 
 export const Navbar = () => {
-  const { darkMode } = useStore();
+  const { darkMode  } = useStore();
+  const{ visualizeOn, setVisualizeOn } = useStore();
   const [isExpanded, setIsExpanded] = useState(false);
   const [isDesktopExpanded, setIsDesktopExpanded] = useState(false);
+
+  console.log(visualizeOn)
   
   const buddhistConcepts = [
-    { id: 'sunyata', label: 'Śūnyatā (Emptiness)' },
-    { id: 'pratityasamutpada', label: 'Pratītyasamutpāda (Dependent Origination)' },
-    { id: 'tathagatagarbha', label: 'Tathāgatagarbha (Buddha Nature)' },
-    { id: 'madhyamaka', label: 'Madhyamaka (Middle way)' }
+    { id: 1, label: 'Śūnyatā (Emptiness)' },
+    { id: 2, label: 'Pratītyasamutpāda (Dependent Origination)' },
+    { id: 3, label: 'Tathāgatagarbha (Buddha Nature)' },
+    { id: 4, label: 'Madhyamaka (Middle way)' }
   ];
 
   const DhammaWheel = () => (
@@ -85,6 +88,9 @@ export const Navbar = () => {
                 }
               `}
               data-node-type={concept.id}
+              onPress={() => {
+                setVisualizeOn(concept.id);
+              }}
             >
               {concept.label}
             </Button>
@@ -95,6 +101,7 @@ export const Navbar = () => {
   );
 
   return (
+   
     <>
       <div
         className={`
@@ -147,6 +154,9 @@ export const Navbar = () => {
               `}
               style={{ fontFamily: "'Roboto Mono', monospace" }}
               data-node-type={concept.id}
+              onPress={() => {
+                setVisualizeOn(concept.id);
+              }}
             >
               {concept.label}
             </Button>
